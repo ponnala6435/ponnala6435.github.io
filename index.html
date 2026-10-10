@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simone Percossi · Portfolio</title>
+  <meta name="description" content="Simone Percossi, Technical Program Manager: progetti, percorso e laurea in Ingegneria Informatica e AI.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-t="skip"></a>
+
+  <header class="bar">
+    <div class="wrap bar__inner">
+      <span class="bar__name">Simone Percossi</span>
+      <nav class="bar__nav" aria-label="Sezioni" data-t-aria="navLabel">
+        <a href="#progetti" data-t="navProjects"></a>
+        <a href="#laurea" data-t="navDegree"></a>
+        <a href="#contatti" data-t="navContact"></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Lingua" data-t-aria="langLabel">
+        <button type="button" data-lang="it">IT</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <h1 class="hero__name">Simone Percossi</h1>
+      <p class="hero__role" id="ruolo"></p>
+      <p class="hero__intro" id="presentazione"></p>
+      <p class="hero__links" id="link-hero"></p>
+
+      <h2 class="visually-hidden" data-t="routeTitle"></h2>
+      <ol class="route" id="percorso"></ol>
+    </section>
+
+    <section class="wrap section" aria-labelledby="forza-titolo">
+      <h2 id="forza-titolo" data-t="strengthsTitle"></h2>
+      <dl class="strengths" id="punti-forza"></dl>
+    </section>
+
+    <section class="wrap section" id="progetti" aria-labelledby="progetto-titolo">
+      <h2 id="progetto-titolo"></h2>
+      <p class="lead" id="progetto-intro"></p>
+
+      <h3 data-t="pipelineTitle"></h3>
+      <ol class="pipeline" id="pipeline"></ol>
+
+      <h3 data-t="resultsTitle"></h3>
+      <div class="table-scroll">
+        <table class="results">
+          <thead>
+            <tr>
+              <th scope="col" data-t="colModel"></th>
+              <th scope="col" class="num" data-t="colAccuracy"></th>
+              <th scope="col" class="num" data-t="colF1"></th>
+              <th scope="col" class="num" data-t="colLatency"></th>
+            </tr>
+          </thead>
+          <tbody id="risultati"></tbody>
+        </table>
+      </div>
+      <p class="note" id="dataset"></p>
+
+      <div class="split">
+        <div>
+          <h3 data-t="errorsTitle"></h3>
+          <ul class="plain-list" id="errori"></ul>
+        </div>
+        <div>
+          <h3 data-t="whyTitle"></h3>
+          <p id="perche"></p>
+        </div>
+      </div>
+
+      <p class="repo-links" id="progetto-link"></p>
+
+      <h3 data-t="otherProjects"></h3>
+      <div id="altri-progetti"></div>
+    </section>
+
+    <section class="wrap section" id="laurea" aria-labelledby="laurea-titolo">
+      <h2 id="laurea-titolo" data-t="degreeTitle"></h2>
+      <p class="lead" id="laurea-nome"></p>
+
+      <div class="credits">
+        <p class="credits__summary" id="crediti-sintesi"></p>
+        <div class="fiber" id="fibra" role="img"></div>
+        <ul class="legend" id="legenda"></ul>
+      </div>
+
+      <div class="areas" id="aree"></div>
+
+      <h3 data-t="nextTitle"></h3>
+      <ul class="next" id="da-sostenere"></ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer" id="contatti">
+    <h2 data-t="contactTitle"></h2>
+    <p class="footer__links" id="link-footer"></p>
+    <p class="note" id="aggiornato"></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
