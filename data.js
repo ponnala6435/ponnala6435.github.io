@@ -50,16 +50,17 @@ window.PORTFOLIO = {
   ],
 
   puntiForza: [
-    { titolo: { it: "Delivery", en: "Delivery" },
-      it: "Programmi IT governati dalla raccolta dei requisiti al collaudo con gli utenti, tenendo sotto controllo rischi, dipendenze e fornitori.",
-      en: "IT programs governed from requirements to user acceptance testing, keeping risks, dependencies and vendors under control." },
-    { titolo: { it: "Adozione", en: "Adoption" },
-      it: "Referente ICT per le sedi territoriali: raccolgo le esigenze del campo e le trasformo in miglioramenti di processo. Docente interno per un corso ufficiale HR.",
-      en: "ICT liaison for regional teams: I collect field needs and turn them into process improvements. Internal trainer for an official HR course." },
-    { titolo: { it: "AI applicata", en: "Applied AI" },
-      it: "Una pipeline di computer vision costruita e misurata: 79% di accuratezza su 10 categorie di capi.",
-      en: "A computer vision pipeline built and measured: 79% accuracy across 10 garment categories." }
+    { titolo: { it: "Ponte tra business e tecnologia", en: "Bridge between business and technology" },
+      it: "Traduco esigenze di business in requisiti e soluzioni concrete, e le porto in produzione con fornitori e team tecnici.",
+      en: "I turn business needs into requirements and concrete solutions, and take them to production with vendors and technical teams." },
+    { titolo: { it: "Vicino a chi usa i sistemi", en: "Close to the people who use the systems" },
+      it: "Come referente ICT per le sedi territoriali ascolto chi lavora sul campo e trasformo le sue esigenze in miglioramenti di processo. Formo i colleghi sui sistemi aziendali.",
+      en: "As ICT liaison for regional teams I listen to people in the field and turn their needs into process improvements. I train colleagues on company systems." },
+    { titolo: { it: "AI con metodo", en: "AI with method" },
+      it: "Capisco modelli, metriche e limiti quanto basta per giudicare se un progetto AI è pronto per la produzione, e per parlarne sia con i data scientist sia con il business.",
+      en: "I understand models, metrics and limits well enough to judge whether an AI project is ready for production, and to discuss it with both data scientists and the business." }
   ],
+
 
   progettoPrincipale: {
     titolo: { it: "MissingPieces: riconoscere un capo da una foto", en: "MissingPieces: recognising a garment from a photo" },
