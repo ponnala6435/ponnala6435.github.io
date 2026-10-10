@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simone Percossi · Portfolio</title>
   <meta name="description" content="Simone Percossi, Technical Program Manager: progetti, percorso e laurea in Ingegneria Informatica e AI.">
+  <meta name="theme-color" content="#0b0c18">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,21 +28,36 @@
 
   <main id="main">
     <section class="hero wrap">
-      <h1 class="hero__name">Simone Percossi</h1>
-      <p class="hero__role" id="ruolo"></p>
-      <p class="hero__intro" id="presentazione"></p>
-      <p class="hero__links" id="link-hero"></p>
+      <div class="hero__text">
+        <p class="hero__kicker" data-t="kicker"></p>
+        <h1 class="hero__name">Simone Percossi</h1>
+        <p class="hero__role" id="ruolo"></p>
+        <p class="hero__intro" id="presentazione"></p>
+        <p class="links" id="link-hero"></p>
+      </div>
 
-      <h2 class="visually-hidden" data-t="routeTitle"></h2>
+      <aside class="card-player" aria-labelledby="scheda-titolo">
+        <h2 class="card-player__title" id="scheda-titolo" data-t="cardTitle"></h2>
+        <dl class="card-player__stats" id="scheda"></dl>
+        <div class="xp">
+          <div class="xp__head"><span data-t="xpLabel"></span><span id="xp-valore"></span></div>
+          <div class="xp__bar"><span id="xp-riempimento"></span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="wrap section section--tight" aria-labelledby="percorso-titolo">
+      <h2 id="percorso-titolo" data-t="routeTitle"></h2>
       <ol class="route" id="percorso"></ol>
     </section>
 
     <section class="wrap section" aria-labelledby="forza-titolo">
       <h2 id="forza-titolo" data-t="strengthsTitle"></h2>
-      <dl class="strengths" id="punti-forza"></dl>
+      <div class="strengths" id="punti-forza"></div>
     </section>
 
     <section class="wrap section" id="progetti" aria-labelledby="progetto-titolo">
+      <p class="eyebrow" data-t="featured"></p>
       <h2 id="progetto-titolo"></h2>
       <p class="lead" id="progetto-intro"></p>
 
@@ -49,33 +65,21 @@
       <ol class="pipeline" id="pipeline"></ol>
 
       <h3 data-t="resultsTitle"></h3>
-      <div class="table-scroll">
-        <table class="results">
-          <thead>
-            <tr>
-              <th scope="col" data-t="colModel"></th>
-              <th scope="col" class="num" data-t="colAccuracy"></th>
-              <th scope="col" class="num" data-t="colF1"></th>
-              <th scope="col" class="num" data-t="colLatency"></th>
-            </tr>
-          </thead>
-          <tbody id="risultati"></tbody>
-        </table>
-      </div>
+      <div class="compare" id="risultati"></div>
       <p class="note" id="dataset"></p>
 
       <div class="split">
-        <div>
+        <div class="panel">
           <h3 data-t="errorsTitle"></h3>
           <ul class="plain-list" id="errori"></ul>
         </div>
-        <div>
+        <div class="panel">
           <h3 data-t="whyTitle"></h3>
           <p id="perche"></p>
         </div>
       </div>
 
-      <p class="repo-links" id="progetto-link"></p>
+      <p class="links links--code" id="progetto-link"></p>
 
       <h3 data-t="otherProjects"></h3>
       <div id="altri-progetti"></div>
@@ -85,22 +89,23 @@
       <h2 id="laurea-titolo" data-t="degreeTitle"></h2>
       <p class="lead" id="laurea-nome"></p>
 
-      <div class="credits">
+      <div class="credits panel">
         <p class="credits__summary" id="crediti-sintesi"></p>
         <div class="fiber" id="fibra" role="img"></div>
         <ul class="legend" id="legenda"></ul>
       </div>
 
+      <h3 data-t="doneTitle"></h3>
       <div class="areas" id="aree"></div>
 
       <h3 data-t="nextTitle"></h3>
-      <ul class="next" id="da-sostenere"></ul>
+      <ul class="courses courses--next" id="da-sostenere"></ul>
     </section>
   </main>
 
   <footer class="wrap footer" id="contatti">
     <h2 data-t="contactTitle"></h2>
-    <p class="footer__links" id="link-footer"></p>
+    <p class="links" id="link-footer"></p>
     <p class="note" id="aggiornato"></p>
   </footer>
 

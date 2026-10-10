@@ -121,12 +121,12 @@ window.PORTFOLIO = {
     creditiTotali: 180
   },
 
-  // I colori seguono il codice colori delle fibre ottiche.
+  // Colori delle aree (palette ispirata a EPICODE)
   aree: {
-    ai:    { it: "AI e dati",            en: "AI & data",              colore: "#2563B0" },
-    sw:    { it: "Sviluppo software",    en: "Software development",   colore: "#D46B12" },
-    cloud: { it: "Cloud e reti",         en: "Cloud & networks",       colore: "#2E8550" },
-    base:  { it: "Fondamenti e metodo",  en: "Foundations & method",   colore: "#7A4F2E" }
+    ai:    { it: "AI e dati",            en: "AI & data",              colore: "#E43FC4" },
+    sw:    { it: "Sviluppo software",    en: "Software development",   colore: "#2EDDEB" },
+    cloud: { it: "Cloud, reti e sicurezza", en: "Cloud, networks & security", colore: "#8F7BFF" },
+    base:  { it: "Fondamenti e metodo",  en: "Foundations & method",   colore: "#F4B942" }
   },
 
   // Esami superati. "prova" usa le chiavi: progetto, scritto, scrittoColloquio, test.
@@ -180,11 +180,27 @@ window.PORTFOLIO = {
       programma: ["Functions, limits and derivatives", "Integrals, sequences and series", "Linear algebra", "Probability and statistics"] }
   ],
 
-  // Terzo anno, ancora da sostenere.
+  // Terzo anno, ancora da sostenere: quando superi un esame spostalo in "esami" e aggiungi il voto.
   daSostenere: [
-    { nome: "Introduction to Deep Learning & NLP", ects: 6, obbligatorio: true },
-    { nome: "Introduction to Large Language Models", ects: 6, obbligatorio: true },
-    { nome: { it: "Quattro esami a scelta", en: "Four elective exams" }, ects: 24 },
-    { nome: { it: "Tesi di laurea", en: "Final dissertation" }, ects: 24 }
+    { nome: "Introduction to Deep Learning & NLP", ects: 6, area: "ai", obbligatorio: true,
+      programma: ["Neural networks and deep learning frameworks", "Word embeddings", "RNN and LSTM", "Attention and Transformers", "Text classification and sentiment analysis", "Sequence-to-sequence models"] },
+    { nome: "Introduction to Large Language Models", ects: 6, area: "ai", obbligatorio: true,
+      programma: ["Architecture of large language models", "Training, optimisation and fine-tuning", "Evaluation and performance metrics", "Prompt strategies", "Integrating LLMs into software"] },
+    { nome: "Data Analysis", ects: 6, area: "ai",
+      programma: ["Data preparation", "Exploratory data analysis", "Python for data analysis", "Data visualisation", "Statistical analysis"] },
+    { nome: "AWS Cloud Practitioner", ects: 6, area: "cloud",
+      programma: ["AWS global infrastructure", "Compute, storage and databases", "Security, identity and compliance", "Cost management", "Well-Architected Framework"] },
+    { nome: "Introduction to Cyber Security", ects: 6, area: "cloud",
+      programma: ["Information and network security", "Web application security", "Cryptography and data protection", "Malware and endpoint security", "Incident response and forensics"] },
+    { nome: "IoT Development", ects: 6, area: "sw",
+      programma: ["IoT programming", "IoT connectivity", "IoT project development", "Security and ethics in IoT"] },
+    { nome: { it: "Tesi di laurea", en: "Final dissertation" }, ects: 24, programma: [] }
+  ],
+
+  // Scheda in alto a destra. I crediti si calcolano da soli.
+  scheda: [
+    { valore: "9", it: "anni in Open Fiber", en: "years at Open Fiber" },
+    { valore: "57", it: "progetti governati nel 2025", en: "projects governed in 2025" },
+    { valore: { it: "1,5M€", en: "€1.5M" }, it: "valore dei progetti 2025", en: "2025 project value" }
   ]
 };
