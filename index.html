@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=202610102006">
+  <link rel="stylesheet" href="style.css?v=202610102010">
 </head>
 <body>
   <a class="skip" href="#main" data-t="skip"></a>
@@ -96,7 +96,17 @@
       </div>
 
       <h3 data-t="otherProjects"></h3>
-      <div id="altri-progetti"></div>
+      <div class="terminal">
+        <div class="terminal__bar" aria-hidden="true">
+          <span class="terminal__dots"><i></i><i></i><i></i></span>
+          <span class="terminal__title">simone@portfolio: ~/altri-progetti</span>
+        </div>
+        <div class="terminal__body">
+          <p class="terminal__line" aria-hidden="true"><span class="t-user">simone@portfolio</span>:<span class="t-path">~/altri-progetti</span>$ ls</p>
+          <div id="altri-progetti"></div>
+          <p class="terminal__line" aria-hidden="true"><span class="t-user">simone@portfolio</span>:<span class="t-path">~/altri-progetti</span>$ <span class="t-cursor"></span></p>
+        </div>
+      </div>
     </section>
 
     <section class="wrap section" id="laurea" aria-labelledby="laurea-titolo">
@@ -123,7 +133,7 @@
     <p class="note" id="aggiornato"></p>
   </footer>
 
-  <script src="data.js?v=202610102006"></script>
-  <script src="app.js?v=202610102006"></script>
+  <script src="data.js?v=202610102010"></script>
+  <script src="app.js?v=202610102010"></script>
 </body>
 </html>

@@ -193,14 +193,16 @@
     }).join("");
 
     $("altri-progetti").innerHTML = D.altriProgetti.map(function (p) {
+      var folder = p.cartella || "";
       var action = p.url
         ? '<a class="btn-ghost" href="' + esc(p.url) + '" rel="noopener">' + u.viewCode + ' <span aria-hidden="true">↗</span></a>'
         : "";
       return '<article class="project-row"><div class="project-row__main">' +
+        (folder ? '<p class="project-row__dir" aria-hidden="true">' + esc(folder) + "/</p>" : "") +
         "<h4>" + esc(t(p.titolo)) + "</h4>" +
         "<p>" + esc(t(p.breve)) + "</p>" +
         '<ul class="topics">' + p.tech.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
-        '<p class="project-row__course">' + u.course + ": " + esc(p.corso) + "</p>" +
+        '<p class="project-row__course"># ' + u.course + ": " + esc(p.corso) + "</p>" +
         "</div>" + action + "</article>";
     }).join("");
 

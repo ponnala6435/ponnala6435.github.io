@@ -104,6 +104,7 @@ window.PORTFOLIO = {
 
   altriProgetti: [
     { titolo: { it: "MissingPieces, back end", en: "MissingPieces, back end" },
+      cartella: "missingpieces-backend",
       breve: {
         it: "API REST per un guardaroba digitale: login con ruoli, catalogo, upload delle immagini e suggerimenti di outfit in base al meteo.",
         en: "REST API for a digital wardrobe: login with roles, catalogue, image upload and weather-based outfit suggestions."
@@ -112,6 +113,7 @@ window.PORTFOLIO = {
       corso: "Back-end Programming",
       url: "https://github.com/spercossi/MISSING-PIECES-BACKEND" },
     { titolo: { it: "MissingPieces, app web", en: "MissingPieces, web app" },
+      cartella: "missingpieces-webapp",
       breve: {
         it: "App per catalogare i propri capi, creare una wishlist e ricevere abbinamenti basati sulla compatibilità dei colori.",
         en: "App to catalogue your clothes, build a wishlist and get outfit matches based on colour compatibility."
@@ -120,6 +122,7 @@ window.PORTFOLIO = {
       corso: "Front-end Programming",
       url: "https://github.com/spercossi/missingpieces" },
     { titolo: { it: "JamFinder", en: "JamFinder" },
+      cartella: "jamfinder",
       breve: {
         it: "Applicazione per organizzare jam session tra musicisti, con notifiche automatiche ai partecipanti.",
         en: "Application to organise jam sessions between musicians, with automatic notifications to participants."
