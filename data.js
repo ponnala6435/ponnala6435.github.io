@@ -64,17 +64,15 @@ window.PORTFOLIO = {
   progettoPrincipale: {
     titolo: { it: "MissingPieces: riconoscere un capo da una foto", en: "MissingPieces: recognising a garment from a photo" },
     intro: {
-      it: "Un'app per il guardaroba digitale costruita in tre corsi della laurea. Il cuore è una pipeline di computer vision che parte da una foto scattata in casa, su pavimenti e tappeti qualsiasi, e restituisce un JSON pronto per l'API.",
-      en: "A digital wardrobe app built across three degree courses. Its core is a computer vision pipeline that starts from a photo taken at home, on any floor or rug, and returns a JSON payload ready for the API."
+      it: "Un sistema di computer vision che parte da una foto scattata in casa, su pavimenti e tappeti qualsiasi, riconosce il capo e ne estrae il colore. Restituisce un JSON pronto per essere integrato in un'API. È il progetto finale del corso di Computer Vision ed è il pezzo centrale di MissingPieces, un'idea di guardaroba digitale che ho sviluppato in più corsi.",
+      en: "A computer vision system that starts from a photo taken at home, on any floor or rug, recognises the garment and extracts its colour. It returns a JSON payload ready to be integrated into an API. It is the final project of the Computer Vision course and the core of MissingPieces, a digital wardrobe idea I developed across several courses."
     },
     passi: [
       { it: "Foto dell'utente", en: "User photo", det: "224 × 224 px, RGB" },
       { it: "Separazione del capo dallo sfondo", en: "Garment separated from background", det: "GrabCut + morphology" },
       { it: "Colore dominante", en: "Dominant colour", det: "K-Means, k = 3" },
       { it: "Categoria del capo", en: "Garment category", det: "ResNet18, 10 classes" },
-      { it: "JSON per l'API", en: "JSON for the API", det: "category, confidence, colour" },
-      { it: "Back end", en: "Back end", det: "Spring Boot, JWT, PostgreSQL" },
-      { it: "App web", en: "Web app", det: "React" }
+      { it: "Risultato in JSON", en: "JSON output", det: "category, confidence, colour" }
     ],
     dataset: {
       it: "Dataset: 5.175 immagini verificate (Kaggle, clothing-dataset-full), 10 categorie, 20% per la validazione.",
@@ -95,17 +93,27 @@ window.PORTFOLIO = {
         en: "Skirts are the hardest class: the SVM never detects them, ResNet18 reaches 51.6% recall." }
     ],
     perche: {
-      it: "Ho confrontato una soluzione semplice con una più costosa usando le stesse metriche, ho analizzato dove sbaglia e ho prodotto un risultato che il resto del sistema può usare. È il percorso che serve per portare un caso d'uso AI dal pilota alla produzione.",
-      en: "I compared a simple solution with a costlier one on the same metrics, analysed where it fails and produced an output the rest of the system can use. It is the path an AI use case needs to go from pilot to production."
+      it: "Ho confrontato una soluzione semplice con una più costosa usando le stesse metriche, ho analizzato dove sbaglia e ho prodotto il risultato in un formato pronto per l'integrazione. È il percorso che serve per portare un caso d'uso AI dal pilota alla produzione.",
+      en: "I compared a simple solution with a costlier one on the same metrics, analysed where it fails and produced the output in a format ready for integration. It is the path an AI use case needs to go from pilot to production."
     },
     link: [
-      { it: "Pipeline di computer vision", en: "Computer vision pipeline", url: "https://github.com/spercossi/Computer-Vision---Missing-Pieces-Clothes-Recognition" },
-      { it: "Back end", en: "Back end", url: "https://github.com/spercossi/MISSING-PIECES-BACKEND" },
-      { it: "App web", en: "Web app", url: "https://github.com/spercossi/missingpieces" }
+      { it: "Notebook e documentazione", en: "Notebook and documentation", url: "https://github.com/spercossi/Computer-Vision---Missing-Pieces-Clothes-Recognition" }
     ]
   },
 
   altriProgetti: [
+    { titolo: { it: "MissingPieces, back end", en: "MissingPieces, back end" },
+      testo: {
+        it: "API REST per un guardaroba digitale: registrazione e login con JWT e ruoli, catalogo prodotti, upload delle immagini su Cloudinary e suggerimenti di outfit in base al meteo. Java 21, Spring Boot, PostgreSQL, con test unitari e di integrazione. Progetto del corso di Back-end Programming.",
+        en: "REST API for a digital wardrobe: sign-up and login with JWT and roles, product catalogue, image upload to Cloudinary and weather-based outfit suggestions. Java 21, Spring Boot, PostgreSQL, with unit and integration tests. Back-end Programming course project."
+      },
+      url: "https://github.com/spercossi/MISSING-PIECES-BACKEND" },
+    { titolo: { it: "MissingPieces, app web", en: "MissingPieces, web app" },
+      testo: {
+        it: "App React per catalogare i propri capi, creare una wishlist e ricevere abbinamenti basati sulla compatibilità dei colori, con pannello di amministrazione. Progetto del corso di Front-end Programming.",
+        en: "React app to catalogue your own clothes, build a wishlist and get outfit matches based on colour compatibility, with an admin panel. Front-end Programming course project."
+      },
+      url: "" }, // link da rimettere quando il README su GitHub è sistemato: https://github.com/spercossi/missingpieces
     { titolo: { it: "JamFinder: organizzare jam session", en: "JamFinder: organising jam sessions" },
       testo: {
         it: "Applicazione Java per far incontrare musicisti e organizzare jam session, con notifiche automatiche ai partecipanti. Usa quattro design pattern: Factory, Observer, Composite e Iterator. Progetto del corso di Object-Oriented Programming.",

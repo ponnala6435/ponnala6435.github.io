@@ -108,7 +108,6 @@
     return [
       '<a href="mailto:' + esc(c.email) + '">' + esc(c.email) + "</a>",
       '<a href="' + esc(c.linkedin) + '" rel="noopener">LinkedIn</a>',
-      '<a href="' + esc(c.github) + '" rel="noopener">GitHub</a>',
       '<a class="btn" href="' + esc(c.cv) + '" download>' + u.cv + "</a>"
     ].join("");
   }
@@ -190,7 +189,8 @@
     }).join("");
 
     $("altri-progetti").innerHTML = D.altriProgetti.map(function (p) {
-      return '<article class="panel other"><h4><a href="' + esc(p.url) + '" rel="noopener">' + esc(t(p.titolo)) + "</a></h4><p>" + esc(t(p.testo)) + "</p></article>";
+      var title = p.url ? '<a href="' + esc(p.url) + '" rel="noopener">' + esc(t(p.titolo)) + "</a>" : esc(t(p.titolo));
+      return '<article class="panel other"><h4>' + title + "</h4><p>" + esc(t(p.testo)) + "</p></article>";
     }).join("");
 
     renderDegree(u, S);

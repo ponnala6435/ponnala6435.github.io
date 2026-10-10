@@ -207,7 +207,7 @@ p { margin: 0 0 1em; }
 .tile p { margin: 0; color: var(--soft); }
 
 /* Pipeline: numbered steps */
-.pipeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+.pipeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
 .pipeline li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
 .pipeline__n {
   display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
@@ -241,7 +241,8 @@ p { margin: 0 0 1em; }
 .plain-list li::marker { color: var(--magenta); }
 .links--code { margin-top: 24px; }
 
-.other { max-width: 72ch; }
+#altri-progetti { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.other { display: flex; flex-direction: column; }
 .other h4 { margin-bottom: 8px; }
 .other p { margin: 0; color: var(--soft); }
 
