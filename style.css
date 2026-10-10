@@ -330,3 +330,33 @@ p { margin: 0 0 1em; }
   .area > .courses { padding: 4px 18px 10px; }
   .card-player__stats dd { font-size: 2.125rem; }
 }
+
+/* Featured project on frosted glass */
+.glass-zone { position: relative; isolation: isolate; }
+.blob { position: absolute; z-index: -1; border-radius: 50%; filter: blur(70px); opacity: 0.55; pointer-events: none; }
+.blob--a { width: 380px; height: 380px; left: -60px; top: -40px; background: var(--magenta); }
+.blob--b { width: 420px; height: 420px; right: -80px; top: 35%; background: var(--violet); opacity: 0.7; }
+.blob--c { width: 320px; height: 320px; left: 30%; bottom: -60px; background: var(--cyan); opacity: 0.35; }
+.glass {
+  position: relative;
+  padding: clamp(24px, 4vw, 48px);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 30px 80px rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+}
+.glass .panel, .glass .model, .glass .pipeline li { background: rgba(13, 14, 30, 0.62); border-color: rgba(255, 255, 255, 0.1); }
+.glass .model.is-best, .glass .pipeline li:nth-child(4) { border-color: var(--magenta); }
+.glass h2 { margin-bottom: 18px; }
+.glass .links--code { margin-bottom: 0; }
+@media (max-width: 760px) {
+  .glass { border-radius: 18px; }
+  .blob--a { width: 240px; height: 240px; }
+  .blob--b { width: 260px; height: 260px; right: -60px; }
+  .blob--c { width: 220px; height: 220px; }
+}
+
+main { overflow-x: hidden; overflow-x: clip; }
+.glass .eyebrow { color: #ffa3ec; }
