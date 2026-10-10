@@ -103,24 +103,31 @@ window.PORTFOLIO = {
 
   altriProgetti: [
     { titolo: { it: "MissingPieces, back end", en: "MissingPieces, back end" },
-      testo: {
-        it: "API REST per un guardaroba digitale: registrazione e login con JWT e ruoli, catalogo prodotti, upload delle immagini su Cloudinary e suggerimenti di outfit in base al meteo. Java 21, Spring Boot, PostgreSQL, con test unitari e di integrazione. Progetto del corso di Back-end Programming.",
-        en: "REST API for a digital wardrobe: sign-up and login with JWT and roles, product catalogue, image upload to Cloudinary and weather-based outfit suggestions. Java 21, Spring Boot, PostgreSQL, with unit and integration tests. Back-end Programming course project."
+      breve: {
+        it: "API REST per un guardaroba digitale: login con ruoli, catalogo, upload delle immagini e suggerimenti di outfit in base al meteo.",
+        en: "REST API for a digital wardrobe: login with roles, catalogue, image upload and weather-based outfit suggestions."
       },
+      tech: ["Java 21", "Spring Boot", "PostgreSQL", "JWT", "Unit & integration tests"],
+      corso: "Back-end Programming",
       url: "https://github.com/spercossi/MISSING-PIECES-BACKEND" },
     { titolo: { it: "MissingPieces, app web", en: "MissingPieces, web app" },
-      testo: {
-        it: "App React per catalogare i propri capi, creare una wishlist e ricevere abbinamenti basati sulla compatibilità dei colori, con pannello di amministrazione. Progetto del corso di Front-end Programming.",
-        en: "React app to catalogue your own clothes, build a wishlist and get outfit matches based on colour compatibility, with an admin panel. Front-end Programming course project."
+      breve: {
+        it: "App per catalogare i propri capi, creare una wishlist e ricevere abbinamenti basati sulla compatibilità dei colori.",
+        en: "App to catalogue your clothes, build a wishlist and get outfit matches based on colour compatibility."
       },
+      tech: ["React", "Redux", "Tailwind CSS"],
+      corso: "Front-end Programming",
       url: "" }, // link da rimettere quando il README su GitHub è sistemato: https://github.com/spercossi/missingpieces
-    { titolo: { it: "JamFinder: organizzare jam session", en: "JamFinder: organising jam sessions" },
-      testo: {
-        it: "Applicazione Java per far incontrare musicisti e organizzare jam session, con notifiche automatiche ai partecipanti. Usa quattro design pattern: Factory, Observer, Composite e Iterator. Progetto del corso di Object-Oriented Programming.",
-        en: "Java application that matches musicians and organises jam sessions, with automatic notifications to participants. Uses four design patterns: Factory, Observer, Composite and Iterator. Object-Oriented Programming course project."
+    { titolo: { it: "JamFinder", en: "JamFinder" },
+      breve: {
+        it: "Applicazione per organizzare jam session tra musicisti, con notifiche automatiche ai partecipanti.",
+        en: "Application to organise jam sessions between musicians, with automatic notifications to participants."
       },
+      tech: ["Java", "Factory", "Observer", "Composite", "Iterator"],
+      corso: "Object-Oriented Programming",
       url: "https://github.com/spercossi/Jamfinder---Java-OOP-Project" }
   ],
+
 
   laurea: {
     nome: { it: "BSc (Hons) in Computer Engineering & Artificial Intelligence", en: "BSc (Hons) in Computer Engineering & Artificial Intelligence" },

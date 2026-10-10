@@ -24,7 +24,7 @@
       doneTitle: "Esami superati, per area",
       nextTitle: "Terzo anno, da sostenere",
       contactTitle: "Contatti",
-      code: "Codice", cv: "CV (PDF)",
+      code: "Codice", cv: "CV (PDF)", viewCode: "Vedi il codice", course: "Corso",
       credits: function (d, t, pct) { return "<strong>" + d + " crediti su " + t + "</strong> (" + pct + "%)"; },
       average: function (m) { return "Media ponderata <strong>" + m + "/100</strong>"; },
       xp: function (d, t) { return d + " / " + t + " crediti"; },
@@ -58,7 +58,7 @@
       doneTitle: "Exams passed, by area",
       nextTitle: "Year three, still to take",
       contactTitle: "Contact",
-      code: "Code", cv: "CV (PDF, Italian)",
+      code: "Code", cv: "CV (PDF, Italian)", viewCode: "View code", course: "Course",
       credits: function (d, t, pct) { return "<strong>" + d + " of " + t + " credits</strong> (" + pct + "%)"; },
       average: function (m) { return "Weighted average <strong>" + m + "/100</strong>"; },
       xp: function (d, t) { return d + " / " + t + " credits"; },
@@ -193,8 +193,15 @@
     }).join("");
 
     $("altri-progetti").innerHTML = D.altriProgetti.map(function (p) {
-      var title = p.url ? '<a href="' + esc(p.url) + '" rel="noopener">' + esc(t(p.titolo)) + "</a>" : esc(t(p.titolo));
-      return '<article class="panel other"><h4>' + title + "</h4><p>" + esc(t(p.testo)) + "</p></article>";
+      var action = p.url
+        ? '<a class="btn-ghost" href="' + esc(p.url) + '" rel="noopener">' + u.viewCode + ' <span aria-hidden="true">↗</span></a>'
+        : "";
+      return '<article class="project-row"><div class="project-row__main">' +
+        "<h4>" + esc(t(p.titolo)) + "</h4>" +
+        "<p>" + esc(t(p.breve)) + "</p>" +
+        '<ul class="topics">' + p.tech.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
+        '<p class="project-row__course">' + u.course + ": " + esc(p.corso) + "</p>" +
+        "</div>" + action + "</article>";
     }).join("");
 
     renderDegree(u, S);
