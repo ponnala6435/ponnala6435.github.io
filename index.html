@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=202610101950">
+  <link rel="stylesheet" href="style.css?v=202610101952">
 </head>
 <body>
   <a class="skip" href="#main" data-t="skip"></a>
@@ -69,7 +69,9 @@
       <h2 id="progetto-titolo"></h2>
       <p class="lead" id="progetto-intro"></p>
 
-      <h3 data-t="pipelineTitle"></h3>
+      <details class="more">
+      <summary class="more__toggle"><span data-t="pipelineTitle"></span><span class="more__hint" data-t="expandHint"></span></summary>
+      <div class="more__body">
       <ol class="pipeline" id="pipeline"></ol>
 
       <h3 data-t="resultsTitle"></h3>
@@ -88,6 +90,8 @@
       </div>
 
       <p class="links links--code" id="progetto-link"></p>
+      </div>
+      </details>
       </div>
       </div>
 
@@ -119,7 +123,7 @@
     <p class="note" id="aggiornato"></p>
   </footer>
 
-  <script src="data.js?v=202610101950"></script>
-  <script src="app.js?v=202610101950"></script>
+  <script src="data.js?v=202610101952"></script>
+  <script src="app.js?v=202610101952"></script>
 </body>
 </html>

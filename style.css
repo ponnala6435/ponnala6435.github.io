@@ -360,3 +360,25 @@ p { margin: 0 0 1em; }
 
 main { overflow-x: hidden; overflow-x: clip; }
 .glass .eyebrow { color: #ffa3ec; }
+
+/* Featured project: details on demand */
+.more { margin-top: 28px; }
+.more__toggle {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 16px;
+  cursor: pointer; list-style: none;
+  padding: 16px 22px; border-radius: 14px;
+  background: rgba(13, 14, 30, 0.55); border: 1px solid rgba(46, 221, 235, 0.45);
+  font-size: 1.25rem; font-weight: 650;
+}
+.more__toggle::-webkit-details-marker { display: none; }
+.more__toggle::after {
+  content: ""; flex: none; margin-left: auto; width: 11px; height: 11px;
+  border-right: 2px solid var(--cyan); border-bottom: 2px solid var(--cyan);
+  transform: rotate(45deg) translateY(-3px); transition: transform 0.15s;
+}
+.more[open] > .more__toggle::after { transform: rotate(-135deg) translateY(-2px); }
+.more__toggle:hover { border-color: var(--cyan); background: rgba(46, 221, 235, 0.08); }
+.more__hint { color: var(--muted); font-size: 1rem; font-weight: 400; }
+.more__body { padding-top: 24px; }
+.more__body > h3:first-child { margin-top: 0; }
+@media (prefers-reduced-motion: reduce) { .more__toggle::after { transition: none; } }
