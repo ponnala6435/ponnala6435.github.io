@@ -117,7 +117,7 @@ window.PORTFOLIO = {
       },
       tech: ["React", "Redux", "Tailwind CSS"],
       corso: "Front-end Programming",
-      url: "" }, // link da rimettere quando il README su GitHub è sistemato: https://github.com/spercossi/missingpieces
+      url: "https://github.com/spercossi/missingpieces" },
     { titolo: { it: "JamFinder", en: "JamFinder" },
       breve: {
         it: "Applicazione per organizzare jam session tra musicisti, con notifiche automatiche ai partecipanti.",
