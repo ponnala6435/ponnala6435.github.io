@@ -41,8 +41,8 @@ window.PORTFOLIO = {
       it: "Requisiti di business tradotti in specifiche per i sistemi BSS/OSS",
       en: "Business needs turned into specs for BSS/OSS systems" },
     { anno: "2024", titolo: "Technical Program Manager",
-      it: "57 progetti governati nel 2025, per circa 1,5M€",
-      en: "57 projects governed in 2025, worth about €1.5M" },
+      it: "Programmi IT end-to-end in ambito BSS/OSS, dai requisiti al collaudo",
+      en: "End-to-end IT programs on BSS/OSS systems, from requirements to testing" },
     { anno: "2027", titolo: { it: "Laurea in Ingegneria Informatica e AI", en: "BSc Computer Engineering & AI" },
       it: "Prevista a luglio, con la tesi",
       en: "Expected in July, with the thesis",
@@ -51,8 +51,8 @@ window.PORTFOLIO = {
 
   puntiForza: [
     { titolo: { it: "Delivery", en: "Delivery" },
-      it: "57 progetti IT governati nel 2025, per circa 1,5M€, dalla raccolta dei requisiti al collaudo con gli utenti.",
-      en: "57 IT projects governed in 2025, worth about €1.5M, from requirements to user acceptance testing." },
+      it: "Programmi IT governati dalla raccolta dei requisiti al collaudo con gli utenti, tenendo sotto controllo rischi, dipendenze e fornitori.",
+      en: "IT programs governed from requirements to user acceptance testing, keeping risks, dependencies and vendors under control." },
     { titolo: { it: "Adozione", en: "Adoption" },
       it: "Referente ICT per le sedi territoriali: raccolgo le esigenze del campo e le trasformo in miglioramenti di processo. Docente interno per un corso ufficiale HR.",
       en: "ICT liaison for regional teams: I collect field needs and turn them into process improvements. Internal trainer for an official HR course." },
@@ -208,7 +208,7 @@ window.PORTFOLIO = {
   // Scheda in alto a destra. I crediti si calcolano da soli.
   scheda: [
     { valore: "9", it: "anni in Open Fiber", en: "years at Open Fiber" },
-    { valore: "57", it: "progetti governati nel 2025", en: "projects governed in 2025" },
-    { valore: { it: "1,5M€", en: "€1.5M" }, it: "valore dei progetti 2025", en: "2025 project value" }
+    { valore: "4", it: "ruoli, da FTTH Designer a TPM", en: "roles, from FTTH Designer to TPM" },
+    { valore: "79%", it: "accuratezza della pipeline di computer vision", en: "accuracy of the computer vision pipeline" }
   ]
 };
