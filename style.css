@@ -347,7 +347,7 @@ p { margin: 0 0 1em; }
   -webkit-backdrop-filter: blur(22px) saturate(150%);
   backdrop-filter: blur(22px) saturate(150%);
 }
-.glass .panel, .glass .model, .glass .pipeline li { background: rgba(13, 14, 30, 0.62); border-color: rgba(255, 255, 255, 0.1); }
+.glass .panel, .glass .model, .glass .pipeline li, .glass .courses--next { background: rgba(13, 14, 30, 0.62); border-color: rgba(255, 255, 255, 0.1); }
 .glass .model.is-best, .glass .pipeline li:nth-child(4) { border-color: var(--magenta); }
 .glass h2 { margin-bottom: 18px; }
 .glass .links--code { margin-bottom: 0; }
@@ -444,3 +444,10 @@ main { overflow-x: hidden; overflow-x: clip; }
   .terminal__title { margin-right: 0; text-align: left; font-size: 0.8125rem; }
   .terminal__line { font-size: 0.8125rem; }
 }
+
+/* Degree section on the same glass as the featured project, glows mirrored */
+.glass-zone--degree .blob--a { left: auto; right: -60px; top: -60px; background: var(--cyan); opacity: 0.35; }
+.glass-zone--degree .blob--b { right: auto; left: -80px; top: 40%; background: var(--magenta); opacity: 0.45; }
+.glass-zone--degree .blob--c { left: auto; right: 20%; bottom: -80px; background: var(--violet); opacity: 0.6; }
+.glass .credits { margin-top: 24px; }
+.glass .courses--next { max-width: none; }
