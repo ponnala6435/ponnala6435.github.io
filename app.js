@@ -20,7 +20,7 @@
       whyTitle: "Perché conta",
       otherProjects: "Altri progetti",
       degreeTitle: "Percorso di laurea",
-      doneTitle: "Esami superati",
+      doneTitle: "Esami superati, per area",
       nextTitle: "Terzo anno, da sostenere",
       contactTitle: "Contatti",
       code: "Codice", cv: "CV (PDF)",
@@ -30,6 +30,7 @@
       fiberLabel: function (d, t) { return d + " crediti ECTS conseguiti su " + t; },
       remaining: "Da sostenere",
       grade: "voto", compulsory: "Obbligatorio",
+      examsCount: function (n) { return n === 1 ? "1 esame" : n + " esami"; },
       exam: { progetto: "Progetto e colloquio", scritto: "Prova scritta", scrittoColloquio: "Scritto e colloquio", test: "Test a risposta multipla" },
       programLabel: "Programma",
       updated: function (d) { return "Aggiornato il " + d; },
@@ -52,7 +53,7 @@
       whyTitle: "Why it matters",
       otherProjects: "Other projects",
       degreeTitle: "Degree",
-      doneTitle: "Exams passed",
+      doneTitle: "Exams passed, by area",
       nextTitle: "Year three, still to take",
       contactTitle: "Contact",
       code: "Code", cv: "CV (PDF, Italian)",
@@ -62,6 +63,7 @@
       fiberLabel: function (d, t) { return d + " of " + t + " ECTS credits earned"; },
       remaining: "Still to take",
       grade: "grade", compulsory: "Compulsory",
+      examsCount: function (n) { return n === 1 ? "1 exam" : n + " exams"; },
       exam: { progetto: "Project and interview", scritto: "Written exam", scrittoColloquio: "Written exam and interview", test: "Multiple-choice test" },
       programLabel: "Syllabus",
       updated: function (d) { return "Last updated " + d; },
@@ -243,9 +245,12 @@
     $("aree").innerHTML = order.map(function (k) {
       var list = sorted.filter(function (e) { return e.area === k; });
       if (!list.length) return "";
-      return '<section class="area panel"><h4><span class="dot" style="background:' + D.aree[k].colore + '"></span>' + esc(t(D.aree[k])) +
-        ' <span class="muted">' + (S.byArea[k] || 0) + " ECTS</span></h4>" +
-        '<ul class="courses">' + list.map(function (e) { return courseItem(e, u, true); }).join("") + "</ul></section>";
+      return '<details class="area panel"><summary class="area__head">' +
+        '<span class="dot" style="background:' + D.aree[k].colore + '"></span>' +
+        '<span class="area__name">' + esc(t(D.aree[k])) + "</span>" +
+        '<span class="area__meta">' + u.examsCount(list.length) + " · " + (S.byArea[k] || 0) + " ECTS</span>" +
+        "</summary>" +
+        '<ul class="courses">' + list.map(function (e) { return courseItem(e, u, true); }).join("") + "</ul></details>";
     }).join("");
 
     $("da-sostenere").innerHTML = D.daSostenere.map(function (e) { return courseItem(e, u, false); }).join("");

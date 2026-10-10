@@ -257,10 +257,25 @@ p { margin: 0 0 1em; }
 .dot { display: inline-block; flex: none; width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; }
 .dot--rest { background: transparent; box-shadow: inset 0 0 0 2px #5a6090; }
 
-.areas { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.area h4 { display: flex; align-items: center; margin-bottom: 10px; }
-.area h4 .muted { margin-left: auto; font-weight: 500; font-size: 1rem; }
-
+.areas { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.area { padding: 0; }
+.area__head {
+  display: flex; align-items: center; gap: 12px; padding: 20px 24px; cursor: pointer; list-style: none;
+}
+.area__head::-webkit-details-marker { display: none; }
+.area__head .dot { margin-right: 0; }
+.area__name { font-weight: 650; font-size: 1.1875rem; flex: 1; }
+.area__meta { color: var(--muted); font-size: 1rem; white-space: nowrap; }
+.area__head::after {
+  content: ""; flex: none; width: 10px; height: 10px; margin-left: 4px;
+  border-right: 2px solid var(--cyan); border-bottom: 2px solid var(--cyan);
+  transform: rotate(45deg) translateY(-3px); transition: transform 0.15s;
+}
+.area[open] > .area__head::after { transform: rotate(-135deg) translateY(-2px); }
+.area__head:hover .area__name { color: var(--cyan); }
+.area[open] > .area__head { border-bottom: 1px solid var(--line); }
+.area > .courses { padding: 4px 24px 12px; }
+@media (prefers-reduced-motion: reduce) { .area__head::after { transition: none; } }
 .courses { list-style: none; padding: 0; margin: 0; }
 .courses li + li { border-top: 1px solid var(--line); }
 .courses summary, .course__row {
@@ -269,7 +284,7 @@ p { margin: 0 0 1em; }
 .courses summary { cursor: pointer; }
 .courses summary::-webkit-details-marker { display: none; }
 .courses summary:hover .course__name { color: var(--cyan); }
-.courses .area .dot, .area .courses .dot { display: none; }
+.area .courses .dot { display: none; }
 .course__name { flex: 1; }
 .course__meta { color: var(--muted); font-size: 0.9375rem; white-space: nowrap; display: flex; gap: 14px; align-items: center; }
 .course__grade { color: #fff; font-weight: 700; font-size: 1.125rem; min-width: 2.2ch; text-align: right; }
@@ -311,5 +326,7 @@ p { margin: 0 0 1em; }
   .strengths, .split, .areas, .compare { grid-template-columns: 1fr; }
   .panel, .tile, .model { padding: 18px; }
   .courses--next { padding: 4px 16px; }
+  .area__head { padding: 16px 18px; flex-wrap: wrap; }
+  .area > .courses { padding: 4px 18px 10px; }
   .card-player__stats dd { font-size: 2.125rem; }
 }
